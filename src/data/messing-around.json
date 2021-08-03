@@ -1,0 +1,15 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hello There",
+        "description": "A place to say stuff"
+      },
+      "geometry": {
+        "coordinates": [151.21314473103587, -33.86119839706699],
+        "type": "Point"
+      }
+    }
+  ]
+}

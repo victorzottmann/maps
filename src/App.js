@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import ReactMapGl, { Marker } from "react-map-gl"
 
 import cityData from "./data/chicago-parks.json"
+import cityData2 from "./data/messing-around.json"
 
 function App() {
   const mapboxToken = process.env.REACT_APP_MAPBOX_KEY
@@ -19,8 +20,8 @@ function App() {
   }
 
   const [viewport, setviewport] = useState({
-    latitude: coordinates.chicago.latitude,
-    longitude: coordinates.chicago.longitude,
+    latitude: coordinates.sydney.latitude,
+    longitude: coordinates.sydney.longitude,
     width: "100vw",
     height: "100vh",
     zoom: 10,
@@ -36,13 +37,14 @@ function App() {
         }}
         mapStyle={mapStyle}
       >
-        {cityData.features.map((feature) => (
+        {cityData2.features.map((feature) => (
           <Marker
             key={feature.properties.title}
             latitude={feature.geometry.coordinates[1]}
             longitude={feature.geometry.coordinates[0]}
           >
-            <div>🙂</div>
+            {/* <div>🙂</div> */}
+            <button>🙂</button>
           </Marker>
         ))}
       </ReactMapGl>
